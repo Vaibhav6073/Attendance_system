@@ -1,0 +1,20 @@
+{
+  "name": "attendance-management-system",
+  "version": "1.0.0",
+  "description": "Complete attendance management system with QR code scanning",
+  "scripts": {
+    "setup": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "frontend:dev": "cd frontend && npm start",
+    "backend:dev": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "db:setup": "cd backend && npm run db:migrate && npm run db:seed",
+    "test": "cd frontend && npm test && cd ../backend && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["attendance", "qr-code", "dashboard", "react", "nodejs"],
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Launch Attendance System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .launcher {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .launcher:hover {
+            transform: translateY(-5px);
+        }
+        .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+        p {
+            color: #666;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="launcher" onclick="openApp()">
+        <div class="icon">📋</div>
+        <h1>Attendance System</h1>
+        <p>Click to launch the application</p>
+    </div>
+
+    <script>
+        function openApp() {
+            window.location.href = 'demo.html';
+        }
+        
+        // Auto-launch after 3 seconds
+        setTimeout(() => {
+            openApp();
+        }, 3000);
+    </script>
+</body>
+</html>

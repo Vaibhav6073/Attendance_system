@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System</title>
+    <meta http-equiv="refresh" content="0; url=demo.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .header { text-align: center; color: white; margin-bottom: 3rem; }
+        .header h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .header p { font-size: 1.2rem; opacity: 0.9; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+        .card { background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: #4f46e5; margin-bottom: 1rem; font-size: 1.5rem; }
+        .card p { color: #666; line-height: 1.6; margin-bottom: 1rem; }
+        .features { background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .features h2 { color: #4f46e5; margin-bottom: 2rem; text-align: center; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .feature { padding: 1rem; border-left: 4px solid #4f46e5; background: #f8fafc; }
+        .feature h4 { color: #1e293b; margin-bottom: 0.5rem; }
+        .feature p { color: #64748b; font-size: 0.9rem; }
+        .setup { background: #1e293b; color: white; border-radius: 12px; padding: 2rem; margin-top: 2rem; }
+        .setup h2 { margin-bottom: 1rem; }
+        .setup code { background: #374151; padding: 0.5rem 1rem; border-radius: 6px; display: block; margin: 1rem 0; font-family: 'Monaco', 'Menlo', monospace; }
+        .credentials { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 1.5rem; margin: 1rem 0; }
+        .credentials h4 { color: #92400e; margin-bottom: 1rem; }
+        .credentials ul { list-style: none; }
+        .credentials li { margin: 0.5rem 0; color: #78350f; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .tech { background: #e0e7ff; color: #3730a3; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 Attendance Management System</h1>
+            <p>Complete QR Code-based Attendance Solution with Role-based Dashboards</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>🔐 Authentication System</h3>
+                <p>Secure role-based login for Admin, Teachers, and Students with JWT authentication.</p>
+                <div class="tech-stack">
+                    <span class="tech">JWT</span>
+                    <span class="tech">bcrypt</span>
+                    <span class="tech">Role-based</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>📱 QR Code Attendance</h3>
+                <p>Unique QR codes for each student with real-time camera scanning and automatic attendance marking.</p>
+                <div class="tech-stack">
+                    <span class="tech">QR Scanner</span>
+                    <span class="tech">Camera API</span>
+                    <span class="tech">Real-time</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>📊 Analytics Dashboard</h3>
+                <p>Comprehensive dashboards with attendance statistics, charts, and real-time reporting.</p>
+                <div class="tech-stack">
+                    <span class="tech">Chart.js</span>
+                    <span class="tech">Real-time</span>
+                    <span class="tech">Export</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>✨ Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h4>🎨 Modern UI/UX</h4>
+                    <p>Responsive design with dark/light mode support</p>
+                </div>
+                <div class="feature">
+                    <h4>📱 Mobile First</h4>
+                    <p>Optimized for mobile devices and tablets</p>
+                </div>
+                <div class="feature">
+                    <h4>🔔 Notifications</h4>
+                    <p>Real-time alerts for low attendance and absentees</p>
+                </div>
+                <div class="feature">
+                    <h4>📈 Reports</h4>
+                    <p>Export attendance reports in CSV/PDF formats</p>
+                </div>
+                <div class="feature">
+                    <h4>🛡️ Security</h4>
+                    <p>Rate limiting, input validation, and secure authentication</p>
+                </div>
+                <div class="feature">
+                    <h4>⚡ Performance</h4>
+                    <p>Optimized database queries and caching ready</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="setup">
+            <h2>🚀 Quick Start</h2>
+            <p>To run the full application, you'll need Node.js and PostgreSQL installed:</p>
+            
+            <code># Install dependencies
+cd backend && npm install
+cd ../frontend && npm install</code>
+
+            <code># Setup database
+npm run db:migrate && npm run db:seed</code>
+
+            <code># Start the application
+npm run dev</code>
+
+            <div class="credentials">
+                <h4>🔑 Demo Login Credentials</h4>
+                <ul>
+                    <li><strong>Admin:</strong> admin@school.com / admin123</li>
+                    <li><strong>Teacher:</strong> teacher@school.com / teacher123</li>
+                    <li><strong>Student:</strong> student1@school.com / student123</li>
+                </ul>
+            </div>
+
+            <p><strong>Tech Stack:</strong> React + TypeScript, Node.js + Express, PostgreSQL, Tailwind CSS, Chart.js</p>
+            <p><strong>Deployment:</strong> Docker ready, AWS compatible, Production optimized</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem; color: white;">
+            <p>📁 <strong>Project Structure:</strong> Backend API, React Frontend, Database Schema, Documentation, Docker Setup</p>
+            <p>🎯 <strong>Production Ready:</strong> Security, Performance, Scalability, Mobile Responsive</p>
+        </div>
+    </div>
+</body>
+</html>
